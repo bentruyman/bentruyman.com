@@ -1,0 +1,26 @@
+safe: false
+
+source: site
+destination: public
+plugins: plugins
+
+lsi: false
+markdown: rdiscount
+pygments: false
+
+default_layouts:
+  default: default
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+
+  compress:
+    js:   'uglifier'
+    css:  'sass'
+
+exclude: Gemfile, Gemfile.lock, Rakefile, cm.coffee

@@ -1,0 +1,12 @@
+/* TEAM */
+
+  Developer: Ben Truyman
+  Twitter: @bentruyman
+  Github: bentruyman
+  Title: Wolf Pack of One
+
+/* SITE */
+  Technologies: HTML5, CSS3/SASS, Coffescript
+  Libraries: Compass, Foundation, Normalize.css, jQuery
+  Tools: Sublime Text, JSHint, Google Chrome, Love
+  Server: nginx, Jenkins, gitlab, git

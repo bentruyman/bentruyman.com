@@ -1,0 +1,26 @@
+$color-accent: #f00;
+$color-text: #444;
+
+html {
+}
+
+body {
+  color: $color-text;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  @include background(#111 image-url("textures/outlets.png") repeat);
+  border-top: 20px solid $color-accent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-text;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  color: $color-text;
+}
+
+p a {
+  color: $color-accent;
+}
