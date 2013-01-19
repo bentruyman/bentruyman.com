@@ -17,7 +17,7 @@ end
 
 desc 'Continuously compiles the site and starts a simple web server to preview'
 task :preview do
-  system 'jekyll --server --preview'
+  system 'jekyll --server --auto'
 end
 
 desc 'Continuously compiles the site'
