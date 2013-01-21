@@ -1,5 +1,5 @@
 #page-body {
-  background-color: #fafafa;
+  @include background(#fafafa image-url("textures/debut_light.png"));
   
   p {
     line-height: 1.25em;
