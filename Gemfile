@@ -1,15 +1,20 @@
 source "http://rubygems.org"
 
-gem "rake"
-gem "rack"
-gem "foreman"
-gem "jekyll"
-gem "jekyll-assets"
-gem "haml"
-gem "compass"
-gem "zurb-foundation"
-gem "coffee-script"
-gem "uglifier"
-gem "pygments.rb"
-gem "rdiscount"
-gem "sinatra"
+group :development do
+  gem 'rake', '~> 0.9'
+  gem 'coffee-script'
+  gem 'compass', '~> 0.12.2'
+  gem 'haml', '~> 3.1.7'
+  gem 'jekyll', '~> 0.12'
+  gem 'jekyll-assets', '~> 0.3.0'
+  gem 'liquid', '~> 2.3.0'
+  gem 'pygments.rb', '~> 0.3.4'
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'rdiscount', '~> 1.6.8'
+  gem 'RedCloth', '~> 4.2.9'
+  gem 'rubypants', '~> 0.2.0'
+  gem 'stringex', '~> 1.4.0'
+  gem 'uglifier', '~> 1.3.0'
+  gem 'zurb-foundation', '~> 3.2.3'
+end
+

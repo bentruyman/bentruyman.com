@@ -1,0 +1,45 @@
+#page-header {
+  $padding: 70px;
+  
+  background-color: #fafafa;
+  padding-bottom: $padding;
+  padding-top: $padding;
+}
+
+#identity {
+  font-size: 1.25em;
+  font-weight: 700;
+  display: inline-block;
+  @include transition(all 0.15s ease-in-out);
+  
+  &:hover {
+    cursor: pointer;
+    @include transform(scale(1.05) rotateZ(-1deg));
+  }
+}
+
+#primary-nav {
+  ul {
+    float: right;
+  }
+  
+  li {
+    font-weight: 600;
+    margin-left: 2em;
+    float: left;
+  }
+  
+  a {
+    color: $color-text;
+    display: block;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    @include transition(all 0.1s ease-in-out);
+    
+    &:hover {
+      color: darken($color-text, 10%);
+      border-bottom-color: $color-accent;
+    }
+  }
+}

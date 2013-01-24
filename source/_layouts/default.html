@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<<<<<<< Updated upstream
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <section id="page-body" class="container">
+      {{ content }}
+    </section>
+=======
+  <head>
+    {% include head.html %}
+  </head>
+  <body{% if page.section %} id="{{ page.section }}"{% endif %}>
+    {% include header.html %}
+    {% include body.html %}
+>>>>>>> Stashed changes
+    {% include footer.html %}
+    {% include foot.html %}
+  </body>
+</html>
