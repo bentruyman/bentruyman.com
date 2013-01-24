@@ -1,6 +1,5 @@
 module Jekyll
   require 'haml'
-  
   class HamlConverter < Converter
     safe true
     priority :low
@@ -14,8 +13,12 @@ module Jekyll
     end
 
     def convert(content)
-      engine = Haml::Engine.new(content)
-      engine.render
+      begin
+        engine = Haml::Engine.new(content)
+        engine.render
+      rescue StandardError => e
+          puts "!!! HAML Error: " + e.message
+      end
     end
   end
 end
