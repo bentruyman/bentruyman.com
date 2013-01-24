@@ -24,3 +24,7 @@ a {
 p a {
   color: $color-accent;
 }
+
+#page-header-body {
+  @include background(#fafafa image-url("textures/debut_light.png"));
+}
