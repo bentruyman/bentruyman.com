@@ -1,0 +1,26 @@
+#home {
+  #page-body {
+    p {
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+      width: 650px;
+      margin: 0 auto;
+      
+      em {
+        color: red;
+        font-style: normal;
+      }
+    }
+  }
+  
+  .icon-heart {
+    $margin: 60px;
+    
+    color: red;
+    @include text-shadow(5px 5px 0 rgba(0, 0, 0, 0.75));
+    display: block;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+}

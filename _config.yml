@@ -57,9 +57,10 @@ assets:
   dirname: assets
   baseurl: /assets/
   sources:
+    - _assets/fonts
+    - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
-    - _assets/images
 
   compress:
     js:   'uglifier'
