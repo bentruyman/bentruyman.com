@@ -6,13 +6,14 @@ html {
 
 body {
   color: $color-text;
-  font-family: "Quicksand", sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
-  @include background(#111 image-url("textures/outlets.png") repeat);
+  @include background(#111 image-url("textures/irongrip.png") repeat);
   border-top: 20px solid $color-accent;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.branded {
   color: $color-text;
   font-family: "Quicksand", sans-serif;
 }
@@ -27,4 +28,5 @@ p a {
 
 #page-header-body {
   @include background(#fafafa image-url("textures/debut_light.png"));
+  @include box-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
 }

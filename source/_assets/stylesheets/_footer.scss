@@ -1,4 +1,30 @@
 #page-footer {
+  color: #fff;
   height: 200px;
-  padding-top: 30px;
+  padding-top: 20px;
+  
+  h2 {
+    color: #fff;
+    font-size: 18px;
+    @include text-shadow(1px 1px 0 rbga(0, 0, 0, 0.75));
+  }
+  
+  hr {
+    border-top:    1px solid #1f1f1f;
+    border-bottom: 1px solid #4f4f4f;
+  }
+  
+  dt {
+    display: inline;
+    font-weight: 700;
+  }
+  
+  dd {
+    display: inline;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
