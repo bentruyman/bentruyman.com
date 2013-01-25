@@ -9,13 +9,17 @@ body {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   @include background(#111 image-url("textures/irongrip.png") repeat);
-  border-top: 20px solid $color-accent;
+  border-top: 25px solid $color-accent;
 }
 
 h1, h2, h3, h4, h5, h6,
 .branded {
   color: $color-text;
   font-family: "Quicksand", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 a {
@@ -25,9 +29,26 @@ a {
 p a {
   color: $color-accent;
   margin: 1.25em;
+  text-decoration: underline;
 }
 
 #page-header-body {
   @include background(#fafafa image-url("textures/debut_light.png"));
   @include box-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.links {
+  li {
+    $border: 1px solid #dbdbdb;
+    border-bottom: $border;
+    padding: 5px 0;
+    
+    &:first-child {
+      border-top: $border;
+    }
+    
+    a {
+      text-decoration: underline;
+    }
+  }
 }

@@ -1,10 +1,10 @@
 <section id="page-body" class="container">
   <div class="row">
     {% if page.sidebar %}
-      <div class="eleven columns">
+      <div class="ten columns">
         {{ content }}
       </div>
-      <div class="five columns">
+      <div class="five columns offset-by-one">
         {% include sidebar.html %}
       </div>
     {% else %}

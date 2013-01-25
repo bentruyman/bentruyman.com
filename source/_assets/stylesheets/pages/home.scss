@@ -7,6 +7,10 @@
       text-align: center;
       margin: 0 auto;
       
+      @include for-medium() {
+        font-size: 40px; 
+      }
+      
       @include for-small() {
         font-size: 20px;
       }
@@ -26,6 +30,10 @@
     display: block;
     margin-top:    $margin;
     margin-bottom: $margin;
+    
+    @include for-medium() {
+      margin-top: $margin / 2;
+    }
     
     @include for-small() {
       margin-top:    $margin / 3;
