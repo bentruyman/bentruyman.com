@@ -1,15 +1,15 @@
 <section id="page-body" class="container">
   <div class="row">
-    {% if page.sidebar %}
+    {% if page.sidebar == false %}
+      <div class="sixteen columns">
+        {{ content }}
+      </div>
+    {% else %}
       <div class="ten columns">
         {{ content }}
       </div>
       <div class="five columns offset-by-one">
         {% include sidebar.html %}
-      </div>
-    {% else %}
-      <div class="sixteen columns">
-        {{ content }}
       </div>
     {% endif %}
   </div>

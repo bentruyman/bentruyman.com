@@ -2,7 +2,10 @@
 <html>
   {% include head.html %}
   <body{% if page.section %} id="{{ page.section }}"{% endif %}>
-    {% include header-body.html %}
+    <div id="page-header-body">
+      {% include header.html %}
+      {% include body.html %}
+    </div>
     {% include footer.html %}
     {% include foot.html %}
   </body>

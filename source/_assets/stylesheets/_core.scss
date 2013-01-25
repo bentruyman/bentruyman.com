@@ -33,8 +33,18 @@ p a {
 }
 
 #page-header-body {
+  $padding: 60px;
   @include background(#fafafa image-url("textures/debut_light.png"));
   @include box-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+  padding-bottom: $padding;
+  
+  @include for-medium() {
+    padding-bottom: $padding / 2;
+  }
+  
+  @include for-small() {
+    padding-bottom: $padding / 3;
+  }
 }
 
 .links {

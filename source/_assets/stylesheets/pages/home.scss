@@ -1,14 +1,14 @@
 #home {
   #page-body {
     p {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 700;
       line-height: 1.15em;
       text-align: center;
       margin: 0 auto;
       
       @include for-medium() {
-        font-size: 40px; 
+        font-size: 41px; 
       }
       
       @include for-small() {
@@ -29,7 +29,6 @@
     @include text-shadow(5px 5px 0 rgba(0, 0, 0, 0.75));
     display: block;
     margin-top:    $margin;
-    margin-bottom: $margin;
     
     @include for-medium() {
       margin-top: $margin / 2;
