@@ -1,10 +1,17 @@
 @import "settings";
 @import "compass";
-@import "foundation";
 @import "compass/css3";
 @import "foundation/settings";
+@import "foundation/functions/all";
 @import "foundation/mixins/clearfix";
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/font-size";
+@import "foundation/mixins/respond-to";
+@import "foundation/mixins/semantic-grid";
+@import "modular-scale";
+@import "foundation/common/globals";
 @import "foundation/components/grid";
+@import "foundation/common/typography";
 // @import "foundation/common/forms";
 // @import "foundation/components/modules/buttons";
 // @import "foundation/components/modules/ui";
