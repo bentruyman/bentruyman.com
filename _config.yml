@@ -66,9 +66,6 @@ assets:
 #    js:   'uglifier'
 #    css:  'sass'
 
-default_layouts:
-  default: default
-
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
