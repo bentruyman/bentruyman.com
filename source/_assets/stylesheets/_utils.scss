@@ -1,0 +1,42 @@
+$mediaSmall: "only screen and (max-width: 767px)" !default;
+$mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
+$mediaXlarge: "only screen and (min-width: 1441px)" !default;
+$mediaLandscape: "screen and (orientation: landscape)" !default;
+$mediaPortrait: "screen and (orientation: portrait)" !default;
+$mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default;
+
+@mixin for-small {
+  @media #{$mediaSmall} {
+    @content;
+  }
+}
+
+@mixin for-medium {
+  @media #{$mediaMedium} {
+    @content;
+  }
+}
+
+@mixin for-xlarge {
+  @media #{$mediaXlarge} {
+    @content;
+  }
+}
+
+@mixin for-landscape {
+  @media #{$mediaLandscape} {
+    @content;
+  }
+}
+
+@mixin for-portrait {
+  @media #{$mediaPortrait} {
+    @content;
+  }
+}
+
+@mixin for-all {
+  @media #{$mediaAll} {
+    @content;
+  }
+}

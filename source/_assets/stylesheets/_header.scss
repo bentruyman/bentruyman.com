@@ -2,7 +2,12 @@
   $padding: 70px;
   
   padding-bottom: $padding;
-  padding-top: $padding;
+  padding-top:    $padding;
+  
+  @include for-small() {
+    padding-top:    $padding / 3;
+    padding-bottom: $padding / 3;
+  }
 }
 
 #identity {

@@ -1,3 +1,16 @@
 <section id="page-body" class="container">
-  {{ content }}
+  <div class="row">
+    {% if page.sidebar %}
+      <div class="eleven columns">
+        {{ content }}
+      </div>
+      <div class="five columns">
+        {% include sidebar.html %}
+      </div>
+    {% else %}
+      <div class="sixteen columns">
+        {{ content }}
+      </div>
+    {% endif %}
+  </div>
 </section>

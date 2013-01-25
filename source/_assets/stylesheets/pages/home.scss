@@ -3,9 +3,13 @@
     p {
       font-size: 48px;
       font-weight: 700;
+      line-height: 1.15em;
       text-align: center;
-      width: 650px;
       margin: 0 auto;
+      
+      @include for-small() {
+        font-size: 20px;
+      }
       
       em {
         color: red;
@@ -20,7 +24,11 @@
     color: red;
     @include text-shadow(5px 5px 0 rgba(0, 0, 0, 0.75));
     display: block;
-    margin-top: $margin;
+    margin-top:    $margin;
     margin-bottom: $margin;
+    
+    @include for-small() {
+      margin-top:    $margin / 3;
+    }
   }
 }
