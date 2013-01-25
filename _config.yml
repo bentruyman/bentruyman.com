@@ -62,9 +62,9 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
 
- compress:
-   js:   'uglifier'
-   css:  'sass'
+  compress:
+    js:   'uglifier'
+    css:  'sass'
 
 # ----------------------- #
 #   3rd Party Settings    #
