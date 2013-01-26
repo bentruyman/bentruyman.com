@@ -1,0 +1,12 @@
+#debugger {
+  line-height: 25px;
+  text-align: right;
+  background: red;
+  height: 25px;
+  
+  a {
+    color: #fff;
+    font-size: 14px;
+    @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.75));
+  }
+}

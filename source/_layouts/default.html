@@ -2,6 +2,7 @@
 <html>
   {% include head.html %}
   <body{% if page.section %} id="{{ page.section }}"{% endif %}>
+    {% include debugger.html %}
     <div id="page-header-body">
       {% include header.html %}
       {% include body.html %}
