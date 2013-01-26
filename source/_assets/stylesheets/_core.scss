@@ -8,6 +8,7 @@ body {
   color: $color-text;
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
   @include background(#111 image-url("textures/irongrip.png") repeat);
+  @include background-size(300px 301px);
   border-top: 25px solid $color-accent;
 }
 
@@ -34,7 +35,7 @@ a {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 p a {
@@ -46,6 +47,7 @@ p a {
 #page-header-body {
   $padding: 60px;
   @include background(#fafafa image-url("textures/debut_light.png"));
+  @include background-size(200px 200px);
   @include box-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
   padding-bottom: $padding;
   
