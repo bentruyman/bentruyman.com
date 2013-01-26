@@ -7,11 +7,11 @@
       text-align: center;
       margin: 0 auto;
       
-      @include for-medium() {
+      @include respondTo(mediumScreen) {
         font-size: 41px; 
       }
       
-      @include for-small() {
+      @include respondTo(smallScreen) {
         font-size: 20px;
       }
       
@@ -30,11 +30,11 @@
     display: block;
     margin-top:    $margin;
     
-    @include for-medium() {
+    @include respondTo(mediumScreen) {
       margin-top: $margin / 2;
     }
     
-    @include for-small() {
+    @include respondTo(smallScreen) {
       margin-top:    $margin / 3;
     }
   }
