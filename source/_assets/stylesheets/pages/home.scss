@@ -24,9 +24,10 @@
   
   .icon-heart {
     $margin: 60px;
+    $shadow: rgba(0, 0, 0, 0.75);
     
     color: red;
-    @include text-shadow(5px 5px 0 rgba(0, 0, 0, 0.75));
+    @include text-shadow(5px 5px 0 $shadow);
     display: block;
     margin-top:    $margin;
     
@@ -35,6 +36,7 @@
     }
     
     @include respondTo(smallScreen) {
+      @include text-shadow(3px 3px 0 $shadow);
       margin-top:    $margin / 3;
     }
   }

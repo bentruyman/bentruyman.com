@@ -33,12 +33,20 @@
 #primary-nav {
   ul {
     float: right;
+    
+    @include respondTo(smallScreen) {
+      float: none;
+    }
   }
   
   li {
     font-weight: 600;
     margin-left: 2em;
     float: left;
+    
+    &:first-child {
+      margin-left: 0;
+    }
   }
   
   a {
