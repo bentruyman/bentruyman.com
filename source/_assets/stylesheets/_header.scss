@@ -23,7 +23,7 @@
   
   &:hover {
     cursor: pointer;
-    @include transform(scale(1.05) rotateZ(-1deg));
+    @include transform(scale(1.15) rotateZ(-1.5deg));
   }
 }
 
