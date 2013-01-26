@@ -7,14 +7,16 @@ html {
 body {
   color: $color-text;
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
   @include background(#111 image-url("textures/irongrip.png") repeat);
   border-top: 25px solid $color-accent;
 }
 
-h1, h2, h3, h4, h5, h6,
-.branded {
+h1, h2, h3, h4, h5, h6 {
   color: $color-text;
+}
+
+h1, h2,
+.branded {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -22,8 +24,17 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
 a {
   color: $color-text;
+}
+
+p {
+  font-size: 18px;
 }
 
 p a {
