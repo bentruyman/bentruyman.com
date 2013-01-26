@@ -1,10 +1,11 @@
-<div id="sidebar">
+<aside id="sidebar">
   <h2>Recent Posts</h2>
   <ul class="links no-bullet">
-    <li><a href="#">This Is A Post</a></li>
-    <li><a href="#">Here’s Another Post</a></li>
-    <li><a href="#">Awesome Post</a></li>
-    <li><a href="#">Don’t You Like My Posts</a></li>
+    {% for post in site.posts limit: site.recent_posts %}
+      <li class="post">
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
   </ul>
   <h2>GitHub Repositories</h2>
   <ul class="links no-bullet">
@@ -14,4 +15,4 @@
     <li><a href="#">pulverizr</a></li>
     <li><a href="#">coloured-log</a></li>
   </ul>
-</div>
+</aside>
