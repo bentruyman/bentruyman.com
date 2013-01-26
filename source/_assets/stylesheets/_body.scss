@@ -1,7 +1,1 @@
-#page-body {
-  @include transition(opacity 0.15s ease-in-out);
-    
-  &.loading {
-    opacity: 0;
-  }
-}
+#page-body {}
