@@ -6,9 +6,9 @@
     <div class="eight columns">
       <nav id="primary-nav" class="branded">
         <ul class="no-bullet">
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/resume/">Resume</a></li>
+          <li><a{% if page.section == "blog" %} class="active"{% endif %} href="/blog/">Blog</a></li>
+          <li><a{% if page.section == "about" %} class="active"{% endif %} href="/about/">About</a></li>
+          <li><a{% if page.section == "resume" %} class="active"{% endif %} href="/resume/">Résumé</a></li>
         </ul>
       </nav>
     </div>

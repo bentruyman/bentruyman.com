@@ -57,7 +57,8 @@
     border-bottom-width: 2px;
     @include transition(all 0.1s ease-in-out);
     
-    &:hover {
+    &:hover,
+    &.active {
       color: darken($color-text, 10%);
       border-bottom-color: $color-accent;
     }
