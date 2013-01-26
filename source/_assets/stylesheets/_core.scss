@@ -31,6 +31,7 @@ h3 {
 
 a {
   color: $color-text;
+  @include transition(color 0.15s ease-in-out);
 }
 
 p {
@@ -50,11 +51,11 @@ p a {
   @include box-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
   padding-bottom: $padding;
   
-  @include for-medium() {
+  @include respondTo(mediumScreen) {
     padding-bottom: $padding / 2;
   }
   
-  @include for-small() {
+  @include respondTo(smallScreen) {
     padding-bottom: $padding / 3;
   }
 }
