@@ -3,13 +3,16 @@ $(->
   $container = $("#gh_repos")
   
   if $container.length
+    handleError = ->
+      $container.addClass("error").text("Error loading feed")
+    
     $.ajax(
       url: "https://api.github.com/users/bentruyman/repos?callback=?"
       dataType: "jsonp"
-      error: -> $container.addClass("error").text("Error loading feed")
+      error: -> handleError
       success: (resp) ->
-        if (!resp || !resp.data)
-          return
+        if (!resp || !resp.data || resp.meta.status != "403")
+          return handleError()
         
         repos = resp.data
         
