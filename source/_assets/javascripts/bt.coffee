@@ -38,13 +38,18 @@ $(->
   s.type = "text/javascript"
   s.src = "http://bentruyman.disqus.com/count.js"
   
-  (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s)
-  
+  (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("body")[0]).appendChild(s)
+)
+
+$(->
   # comment box
-  dsq = document.createElement('script')
-  dsq.type = 'text/javascript'
-  dsq.async = true
-  dsq.src = 'http://bentruyman.disqus.com/embed.js'
+  $container = $("#disqus_thread")
   
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  if $container.length
+    dsq = document.createElement("script")
+    dsq.type = "text/javascript"
+    dsq.async = true
+    dsq.src = "http://bentruyman.disqus.com/embed.js"
+    
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 )
