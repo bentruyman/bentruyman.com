@@ -1,3 +1,56 @@
+# debugger
+$(->
+  FROM_USER = "from-user"
+  OPEN = "open"
+  TRIGGER_KEY = 192
+  $container = $("#debugger")
+  $form = $("#debugger-form")
+  $input = $form.find("input")
+  $message = $("<li class=\"message\"></li>")
+  $output = $("#debugger-output")
+  $outputList = $output.find("ul")
+  isOpen = false
+  
+  open = ->
+    $container.addClass(OPEN)
+    $input.focus()
+    isOpen = true
+  
+  close = ->
+    $container.removeClass(OPEN)
+    isOpen = false
+  
+  handleInput = (command) ->
+    if (command.length)
+      respond command, true
+  
+  respond = (message, fromUser) ->
+    item = $message.clone()
+    
+    if fromUser
+      item.addClass FROM_USER
+      item.text message
+    
+    $outputList.append item
+    $output[0].scrollTop = $outputList.height()
+  
+  $('body').keydown((event) ->
+    if event.which is TRIGGER_KEY
+      if isOpen
+        close()
+      else
+        open()
+      
+      event.preventDefault()
+  )
+  
+  $form.on("submit", (event) ->
+    handleInput $input.val()
+    $input.val("")
+    event.preventDefault()
+  )
+)
+
 # list out most popular github repos
 $(->
   $container = $("#gh_repos")
@@ -51,5 +104,5 @@ $(->
     dsq.async = true
     dsq.src = "http://bentruyman.disqus.com/embed.js"
     
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
 )

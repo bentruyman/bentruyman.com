@@ -1,4 +1,34 @@
 #debugger {
+  @include background(#191919 image-url("textures/outlets.png"));
+  @include background-size(4px 8px);
+  @include transition(margin-top 0.5s ease-in-out);
+  margin-top: -336px;
+  
+  &.open {
+    margin-top: 0;
+  }
+}
+
+#debugger-output {
+  color: #eee;
+  height: 270px;
+  overflow: scroll;
+}
+
+#debugger-form {
+  input {
+    color: #fff;
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #212121;
+    border: 0;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+  }
+}
+
+#debugger-trigger {
   line-height: 25px;
   text-align: right;
   background: red;

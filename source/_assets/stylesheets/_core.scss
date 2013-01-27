@@ -19,7 +19,7 @@ html {
 body {
   color: $color-text;
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
-  @include background(#111 image-url("textures/irongrip.png") repeat);
+  @include background(#111 image-url("textures/irongrip.png"));
   @include background-size(300px 301px);
 }
 
