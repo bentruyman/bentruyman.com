@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body{% if page.section %} id="{{ page.section }}"{% endif %}>
+  <body{% if page.section %} id="{{ page.section }}"{% endif %}{% if page.comments != false %} data-comments="true"{% endif %}>
     {% include debugger.html %}
     <div id="page-header-body">
       {% include header.html %}
