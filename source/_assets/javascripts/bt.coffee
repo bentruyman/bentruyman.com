@@ -1,6 +1,6 @@
 # list out most popular github repos
 $(->
-  $container = $('#gh_repos')
+  $container = $("#gh_repos")
   
   if $container.length
     $.ajax(
@@ -25,4 +25,15 @@ $(->
         for i in [0...5]
           $container.append "<li><a href=\"#{repos[i].html_url}\">#{repos[i].name}</a></li>"
     )
+)
+
+# handle disqus comments
+$(->
+  # comment count
+  s = document.createElement "script"
+  s.async = true;
+  s.type = "text/javascript";
+  s.src = "http://bentruyman.disqus.com/count.js";
+  
+  (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
 )
