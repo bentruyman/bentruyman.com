@@ -10,9 +10,29 @@
 }
 
 #debugger-output {
-  color: #eee;
+  $foreground: #eee;
+  
+  color: $foreground;
+  font-family: monospace;
   height: 270px;
   overflow: scroll;
+  
+  em {
+    color: lighten($foreground, 25%);
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  .message {
+    border-bottom: 1px solid #333;
+  }
+  
+  .from-user {
+    &:before {
+      color: darken($foreground, 25%);
+      content: "> ";
+    }
+  }
 }
 
 #debugger-form {
