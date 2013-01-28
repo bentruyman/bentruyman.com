@@ -41,15 +41,17 @@ $(->
       handleCommand parseInput input
       historyIndex = commandHistory.length
   
-  addCommand = (command, callback) ->
-    commands[command] = callback
+  addCommand = (command, description, callback) ->
+    commands[command] =
+      description: description
+      callback: callback
   
   removeCommand = (command) ->
     delete commands[command]
   
   handleCommand = (command) ->
     if commands[command.command]?
-      commands[command.command.toLowerCase()](command.args)
+      commands[command.command.toLowerCase()].callback(command.args)
     else
       respond "Command \"#{command.command}\" not found."
   
@@ -109,11 +111,17 @@ $(->
   $input.on("focus", -> isFocused = true)
   $input.on("blur",  -> isFocused = false)
   
-  addCommand("help", (args) ->
-    respond "Hello World"
+  addCommand("help", "Displays this message", (args) ->
+    message = []
+    
+    for command of commands
+      console.log command
+      message.push "#{command} — #{commands[command].description}"
+    
+    respond message.join "<br>"
   )
   
-  addCommand("lol", (args) ->
+  addCommand("lol", "idk", (args) ->
     respond "jk jk"
   )
   
