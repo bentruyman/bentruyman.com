@@ -28,6 +28,8 @@
   }
   
   .from-user {
+    opacity: 0.5;
+    
     &:before {
       color: darken($foreground, 25%);
       content: "> ";

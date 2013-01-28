@@ -115,14 +115,17 @@ $(->
     message = []
     
     for command of commands
-      console.log command
-      message.push "#{command} — #{commands[command].description}"
+      message.push "<em>#{command}</em> — #{commands[command].description}"
     
     respond message.join "<br>"
   )
   
   addCommand("lol", "idk", (args) ->
     respond "jk jk"
+  )
+  
+  addCommand("nyan", "Injects Nyan Cat", (args) ->
+    
   )
   
   respond "Type <em>help</em> to start fun"
