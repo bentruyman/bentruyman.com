@@ -30,6 +30,7 @@ $(->
     $container.addClass(OPEN)
     $input.focus()
     isOpen = true
+    window.scrollTo 0, 0
   
   close = ->
     $container.removeClass(OPEN)
