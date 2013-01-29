@@ -4,6 +4,10 @@
   @include transition(margin-top 0.5s ease-in-out);
   margin-top: -336px;
   
+  @include respondTo(smallScreen) {
+    margin-top: -250px
+  }
+  
   &.open {
     margin-top: 0;
   }
@@ -16,6 +20,10 @@
   font-family: monospace;
   height: 270px;
   overflow: scroll;
+  
+  @include respondTo(smallScreen) {
+    height: 184px;
+  }
   
   em {
     color: lighten($foreground, 25%);
