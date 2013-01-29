@@ -76,6 +76,8 @@ $(->
     $output[0].scrollTop = $outputList.height()
   
   $("body").keydown((event) ->
+    return if event.altKey or event.controlKey or event.metaKey
+    
     switch event.which
       when KEYS.TRIGGER
         toggle()
