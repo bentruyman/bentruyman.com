@@ -88,3 +88,7 @@
     margin-left: 0;
   }
 }
+
+html.grayscale {
+  @include filter(grayscale(100%));
+}

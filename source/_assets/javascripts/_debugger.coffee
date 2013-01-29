@@ -137,6 +137,10 @@ $(->
     respond message.join "\n"
   )
   
+  addCommand("grayscale", "Makes things boring", (args) ->
+    $("html").toggleClass("grayscale");
+  )
+  
   addCommand("nyan", "Toggles Nyan Cat", (->
     isPlaying = false
     
