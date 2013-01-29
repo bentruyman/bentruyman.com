@@ -3,3 +3,4 @@
 //= require _debugger
 //= require _github
 //= require _disqus
+//= require _twitter
