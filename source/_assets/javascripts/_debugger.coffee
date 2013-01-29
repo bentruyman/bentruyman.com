@@ -166,5 +166,4 @@ $(->
   )
   
   respond "Type <em>help</em> to start fun"
-  open()
 )
