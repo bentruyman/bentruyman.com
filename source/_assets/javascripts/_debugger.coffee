@@ -140,6 +140,22 @@ $(->
     respond message.join "\n"
   )
   
+  addCommand("get", "Gets a session cookie (get mycookie)", (args) ->
+    if args.length is 1
+      val = Cookies.get args[0]
+      if val? respond val else respond "undefined"
+    else
+      notEnoughArgs()
+  )
+  
+  addCommand("set", "Sets a session cookie (set mycookie value)", (args) ->
+    if args.length >= 1
+      Cookies.set args[0], args[1]
+      respond "Cookie \"#{args[0]}\" set to \"#{args[1]}\""
+    else
+      notEnoughArgs()
+  )
+  
   addCommand("goto", "Navigates to a page (goto [blog, about, resume])", (args) ->
     if args[0]
       window.location = "/#{args[0]}/"
