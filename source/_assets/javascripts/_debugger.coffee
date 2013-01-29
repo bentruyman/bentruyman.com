@@ -212,7 +212,6 @@ $(->
       $.getJSON(url)
         .success (resp) ->
           channel = resp.value.items[0].channel
-          console.log channel
           
           if channel? and channel.ttl?
             message = []
