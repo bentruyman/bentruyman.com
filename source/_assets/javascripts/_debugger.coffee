@@ -138,7 +138,7 @@ $(->
     
     (args) ->
       if !isPlaying
-        # audio.play()
+        audio.play()
         document.body.appendChild image
       else
         audio.pause()
