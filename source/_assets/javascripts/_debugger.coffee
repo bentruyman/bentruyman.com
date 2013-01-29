@@ -143,6 +143,8 @@ $(->
   addCommand("goto", "Navigates to a page (goto [blog, about, resume])", (args) ->
     if args[0]
       window.location = "/#{args[0]}/"
+    else
+      notEnoughArgs()
   )
   
   addCommand("grayscale", "Makes things boring", (->
