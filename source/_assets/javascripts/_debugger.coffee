@@ -137,8 +137,21 @@ $(->
     respond message.join "\n"
   )
   
-  addCommand("grayscale", "Makes things boring", (args) ->
-    $("html").toggleClass("grayscale");
+  addCommand("grayscale", "Makes things boring", (->
+    KEY = "grayscale"
+    state = false
+    
+    toggleGrayscale = -> $("html").toggleClass("grayscale")
+    
+    if Cookies.get(KEY)? and Cookies.get(KEY) is "true"
+      state = true
+      toggleGrayscale()
+    
+    (args) ->
+      toggleGrayscale()
+      state = !state
+      Cookies.set(KEY, state)
+    )()
   )
   
   addCommand("nyan", "Toggles Nyan Cat", (->
