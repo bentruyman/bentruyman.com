@@ -207,8 +207,10 @@ $(->
   addCommand("weather", "Displays current weather conditions (weather 60601)", (args) ->
     ERROR_MESSAGE = "Error finding weather for the location \"#{args[0]}\""
     
+    input = args.join " "
+    
     if args[0]
-      url = "http://pipes.fy3.b.yahoo.com/pipes/pipe.run?_id=5a36359b823b6cb19e67fc6739c6a02b&_render=json&location=#{args[0]}&_callback=?"
+      url = "http://pipes.fy3.b.yahoo.com/pipes/pipe.run?_id=5a36359b823b6cb19e67fc6739c6a02b&_render=json&location=#{input}&_callback=?"
       $.getJSON(url)
         .success (resp) ->
           channel = resp.value.items[0].channel
