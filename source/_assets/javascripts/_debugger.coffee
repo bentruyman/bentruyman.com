@@ -124,12 +124,28 @@ $(->
     respond message.join "\n"
   )
   
-  addCommand("lol", "idk", (args) ->
-    respond "jk jk"
-  )
-  
-  addCommand("nyan", "Injects Nyan Cat", (args) ->
+  addCommand("nyan", "Toggles Nyan Cat", (->
+    isPlaying = false
     
+    audio = new Audio
+    audio.src = "/assets/audio/nyancat.mp3"
+    audio.loop = true
+    audio.autoplay = false
+    
+    image = new Image
+    image.src = "/assets/images/fun/nyancat.gif"
+    image.id = "nyancat"
+    
+    (args) ->
+      if !isPlaying
+        # audio.play()
+        document.body.appendChild image
+      else
+        audio.pause()
+        document.body.removeChild image
+      
+      isPlaying = !isPlaying
+    )()
   )
   
   respond "Type <em>help</em> to start fun"

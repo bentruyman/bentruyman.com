@@ -67,3 +67,24 @@
     }
   }
 }
+
+#nyancat {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -129px;
+  margin-top: -90.5px;
+  
+  @include animation(nyancat 4s linear infinite);
+}
+
+@include keyframes(nyancat) {
+  0% {
+    left: 0%;
+    margin-left: -258px;
+  }
+  100% {
+    left: 100%;
+    margin-left: 0;
+  }
+}
