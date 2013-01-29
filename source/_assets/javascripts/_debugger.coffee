@@ -3,6 +3,7 @@ $(->
   FROM_USER = "from-user"
   KEYS =
     TRIGGER: 192
+    TAB: 9
     UP: 38
     DOWN: 40
   OPEN = "open"
@@ -40,6 +41,15 @@ $(->
       commandHistory.push input
       handleCommand parseInput input
       historyIndex = commandHistory.length
+  
+  autoComplete = (input) ->
+    pattern = new RegExp "^" + input, "g"
+    
+    for command of commands
+      if command.match pattern
+        return command
+    
+    return null
   
   addCommand = (command, description, callback) ->
     commands[command] =
@@ -81,6 +91,9 @@ $(->
     switch event.which
       when KEYS.TRIGGER
         toggle()
+      when KEYS.TAB
+        command = autoComplete($input.val())
+        if command then makeInput command
       when KEYS.UP
         if isFocused
           historyIndex = Math.max(0, historyIndex - 1)
