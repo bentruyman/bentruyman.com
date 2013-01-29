@@ -85,6 +85,9 @@ $(->
     $outputList.append item
     $output[0].scrollTop = $outputList.height()
   
+  notEnoughArgs = ->
+    respond("Not enough arguments")
+  
   $("body").keydown((event) ->
     return if event.altKey or event.controlKey or event.metaKey
     
@@ -135,6 +138,11 @@ $(->
       message.push "<em>#{command}</em> — #{commands[command].description}"
     
     respond message.join "\n"
+  )
+  
+  addCommand("goto", "Navigates to a page (goto [blog, about, resume])", (args) ->
+    if args[0]
+      window.location = "/#{args[0]}/"
   )
   
   addCommand("grayscale", "Makes things boring", (->
