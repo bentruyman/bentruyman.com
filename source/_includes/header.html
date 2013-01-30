@@ -1,14 +1,14 @@
 <header id="page-header" class="container">
   <div class="row">
     <div class="eight columns">
-      <a id="identity" class="branded" href="/">Ben Truyman</a>
+      <a id="identity" accesskey="h" class="branded" href="/">Ben Truyman</a>
     </div>
     <div class="eight columns">
       <nav id="primary-nav" class="branded">
         <ul class="no-bullet">
-          <li><a{% if page.section == "blog" %} class="active"{% endif %} href="/blog/">Blog</a></li>
-          <li><a{% if page.section == "about" %} class="active"{% endif %} href="/about/">About</a></li>
-          <li><a{% if page.section == "resume" %} class="active"{% endif %} href="/resume/">Résumé</a></li>
+          <li><a accesskey="b"{% if page.section == "blog" %} class="active"{% endif %} href="/blog/">Blog</a></li>
+          <li><a accesskey="a"{% if page.section == "about" %} class="active"{% endif %} href="/about/">About</a></li>
+          <li><a accesskey="r"{% if page.section == "resume" %} class="active"{% endif %} href="/resume/">Résumé</a></li>
         </ul>
       </nav>
     </div>

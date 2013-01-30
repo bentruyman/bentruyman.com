@@ -2,6 +2,7 @@
 <html>
   {% include head.html %}
   <body{% if page.section %} id="{{ page.section }}"{% endif %}{% if page.comments != false %} data-comments="true"{% endif %}>
+    {% include skip_navigation.html %}
     {% include debugger.html %}
     <div id="page-header-body">
       {% include header.html %}

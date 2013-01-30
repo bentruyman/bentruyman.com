@@ -51,6 +51,10 @@ a {
   @include transition(color 0.15s ease-in-out);
 }
 
+a:focus {
+  outline: 1px dotted red;
+}
+
 p {
   font-size: 16px;
 }
@@ -58,6 +62,35 @@ p {
 p a {
   color: $color-accent;
   text-decoration: underline;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
 }
 
 #page-header-body {
