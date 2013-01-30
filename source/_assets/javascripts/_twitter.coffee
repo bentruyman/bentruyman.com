@@ -21,8 +21,6 @@ showTwitterFeed = (tweets, twitter_user) ->
   timeline = document.getElementById("tweets")
   content = []
   
-  console.log tweets, twitter_user
-  
   for tweet in tweets
     content.push "<li><p>"
     content.push linkifyTweet(tweet.text.replace(/\n/g, "<br>"), tweet.entities.urls)
