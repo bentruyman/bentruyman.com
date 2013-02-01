@@ -69,6 +69,10 @@ dt {
   font-weight: bold;
 }
 
+code {
+  @include text-shadow(1px 1px 0 #fff);
+}
+
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
   display: none !important;
