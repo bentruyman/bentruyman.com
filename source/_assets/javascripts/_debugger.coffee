@@ -111,7 +111,7 @@ $(->
             makeInput ""
     
     for key of KEYS
-      if event.which is KEYS[key] and isFocused and isOpen
+      if event.which is KEYS[key] and isFocused and isOpen or event.which is KEYS.TRIGGER
         event.preventDefault()
         break
   )
