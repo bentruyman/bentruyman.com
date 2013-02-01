@@ -11,7 +11,7 @@ $(->
       dataType: "jsonp"
       error: -> handleError
       success: (resp) ->
-        if (!resp || !resp.data || resp.meta.status != "403")
+        if (!resp || !resp.data || resp.meta.status != 200)
           return handleError()
         
         repos = resp.data
