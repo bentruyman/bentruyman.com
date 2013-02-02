@@ -9,11 +9,11 @@ linkifyTweet = (text, url) ->
 
   # Use twitter's api to replace t.co shortened urls with expanded ones.
   for u in url
-    if url[u].expanded_url != null 
-      shortUrl = new RegExp url[u].url, 'g'
-      text = text.replace shortUrl, url[u].expanded_url
-      shortUrl = new RegExp ">" + url[u].url.replace(/https?:\/\//, ""), "g"
-      text = text.replace(shortUrl, ">"+url[u].display_url);
+    if u.expanded_url != null 
+      shortUrl = new RegExp u.url, 'g'
+      text = text.replace shortUrl, u.expanded_url
+      shortUrl = new RegExp ">" + u.url.replace(/https?:\/\//, ""), "g"
+      text = text.replace(shortUrl, ">"+u.display_url);
   
   return text
 
