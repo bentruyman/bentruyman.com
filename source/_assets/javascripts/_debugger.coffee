@@ -157,9 +157,14 @@ $(->
       notEnoughArgs()
   )
   
-  addCommand("goto", "Navigates to a page (goto [blog, about, resume])", (args) ->
-    if args[0]
-      window.location = "/#{args[0]}/"
+  addCommand("goto", "Navigates to a page (goto [home, blog, about, resume])", (args) ->
+    location = args[0]
+    
+    if location?
+      if location is "home" then url = "/"
+      else url = "/#{args[0]}/"
+      
+      window.location = url
     else
       notEnoughArgs()
   )
