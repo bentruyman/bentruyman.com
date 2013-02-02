@@ -28,7 +28,7 @@
     
     color: red;
     @include text-shadow(5px 5px 0 $shadow);
-    display: block;
+    display: inline-block;
     margin-top:    $margin;
     
     @include respondTo(mediumScreen) {
@@ -39,5 +39,18 @@
       @include text-shadow(3px 3px 0 $shadow);
       margin-top:    $margin / 3;
     }
+    
+    &:hover {
+      @include animation(pulse 0.5s ease-in-out infinite);
+    }
+  }
+}
+
+@include keyframes(pulse) {
+  0%, 100% {
+    @include transform(scale(1));
+  }
+  25% {
+    @include transform(scale(1.1));
   }
 }
