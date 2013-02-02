@@ -29,7 +29,7 @@
     color: red;
     @include text-shadow(5px 5px 0 $shadow);
     display: inline-block;
-    margin-top:    $margin;
+    margin-top: $margin;
     
     @include respondTo(mediumScreen) {
       margin-top: $margin / 2;
@@ -37,7 +37,7 @@
     
     @include respondTo(smallScreen) {
       @include text-shadow(3px 3px 0 $shadow);
-      margin-top:    $margin / 3;
+      margin-top: $margin / 3;
     }
     
     &:hover {
