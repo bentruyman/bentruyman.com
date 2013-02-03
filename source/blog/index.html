@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 section: blog
 ---
 
@@ -15,9 +15,9 @@ section: blog
     {% if paginator.next_page %}
       <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
     {% endif %}
-    <a href="/blog/archives">Blog Archives</a>
+      <a href="/blog/archives">Blog Archives</a>
     {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+      <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
     {% endif %}
   </div>
 </div>
