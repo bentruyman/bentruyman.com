@@ -84,7 +84,7 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -92,20 +92,9 @@ google_plus_one_size: medium
 googleplus_user: bentruyman
 googleplus_hidden: false
 
-# Pinboard
-pinboard_user:
-pinboard_count: 3
-
-# Delicious
-delicious_user:
-delicious_count: 3
-
 # Disqus Comments
 disqus_short_name: bentruyman
 disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-15406998-1
-
-# Facebook Like
-facebook_like: false

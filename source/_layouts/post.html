@@ -1,35 +1,17 @@
 ---
-layout: default
+layout: page
 section: blog
-single: true
 ---
 
-<div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
-    </p>
-    {% unless page.sharing == false %}
-      {% include post/sharing.html %}
-    {% endunless %}
-    <p class="meta">
-      {% if page.previous.url %}
-        <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </p>
-  </footer>
-</article>
+{{ content }}
+
+{% unless page.sharing == false %}
+  {% include post/sharing.html %}
+{% endunless %}
+
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h2>Comments</h2>
     <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   </section>
 {% endif %}
-</div>
