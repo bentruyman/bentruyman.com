@@ -11,7 +11,7 @@ desc 'Merges master branch into release branch and pushes the repository'
 task :deploy do
   system 'git checkout release'
   system 'git merge master'
-  system 'git push origin master'
+  system 'git push origin release'
   system 'git checkout master'
 end
 
