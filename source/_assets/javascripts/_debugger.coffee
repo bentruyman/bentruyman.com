@@ -186,6 +186,19 @@ $(->
     )()
   )
   
+  addCommand("norris", "Truths about the man himself", (args) ->
+    ERROR_MESSAGE = "Error, Chuck Norris took down the server you were attempting to contact"
+    
+    $.getJSON("http://api.icndb.com/jokes/random?limitTo=[nerdy]&callback=?")
+      .success (resp) ->
+        if resp?.value?.joke?
+          respond resp.value.joke
+        else
+          respond ERROR_MESSAGE
+      .error (resp) ->
+        respond ERROR_MESSAGE
+  )
+  
   addCommand("nyan", "Toggles Nyan Cat", (->
     isPlaying = false
     
