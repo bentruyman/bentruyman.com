@@ -234,7 +234,7 @@ $(->
         .success (resp) ->
           channel = resp.value.items[0].channel
           
-          if channel? and channel.ttl?
+          if channel?.ttl?
             message = []
             condition = channel.item["yweather:condition"]
             location = channel.item.title
