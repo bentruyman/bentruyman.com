@@ -5,6 +5,11 @@ section: blog
 
 {% include article.html %}
 
+<p>
+  Posted in
+  {% include post/categories.html %}
+</p>
+
 {% unless page.sharing == false %}
   {% include post/sharing.html %}
 {% endunless %}
