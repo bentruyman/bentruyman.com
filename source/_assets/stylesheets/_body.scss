@@ -1,1 +1,19 @@
 #page-body {}
+
+.button {
+  color: #fff;
+  font-weight: bold;
+  @include text-shadow(0 -1px 0 #000);
+  @include background(#f00 linear-gradient(top, #f00, darken(#f00, 10%)));
+  @include border-radius(5px);
+  padding: 8px 16px;
+  
+  &:hover {
+    color: #fff;
+  }
+}
+
+.button-header {
+  float: right;
+  margin-top: -53px;
+}

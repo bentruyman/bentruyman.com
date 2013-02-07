@@ -225,7 +225,6 @@ ul.icons {
   }
 }
 
-
 .icon-spin {
   display: inline-block;
   -moz-animation: spin 2s infinite linear;
@@ -260,5 +259,8 @@ ul.icons {
   .btn .icon-spin { height: auto; }
   .icon-spin.icon-large { height: 1.25em; }
   .btn .icon-spin.icon-large { height: .75em; }
-}.icon-heart:before   { content: "\f004"; }
-.icon-cog:before    { content: "\f013"; }
+}
+
+.icon-heart:before        { content: "\f004"; }
+.icon-cog:before          { content: "\f013"; }
+.icon-download-alt:before { content: "\f019"; }
