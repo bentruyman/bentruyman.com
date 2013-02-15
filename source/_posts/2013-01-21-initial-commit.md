@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Initial Commit"
-date: 2013-01-21 16:33
+date: 2013-02-07 18:00
 comments: true
-categories: initial
+categories: initial-commit
 ---
 
 More to come soon.
