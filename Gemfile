@@ -1,5 +1,10 @@
 source "http://rubygems.org"
 
+if RUBY_VERSION =~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
 group :development do
   gem 'rake', '~> 0.9'
   gem 'coffee-script'
@@ -18,4 +23,3 @@ group :development do
   gem 'zurb-foundation', '~> 3.2.3'
   gem 'animation', '~> 0.1.alpha.3'
 end
-
