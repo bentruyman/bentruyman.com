@@ -203,7 +203,6 @@ $(->
     isPlaying = false
     
     audio = new Audio
-    audio.src = "/assets/audio/nyancat.mp3"
     audio.loop = true
     audio.autoplay = false
     
@@ -212,6 +211,11 @@ $(->
     image.id = "nyancat"
     
     (args) ->
+      # lazy load audio
+      if !audio.src
+        audio.src = "/assets/audio/nyancat.mp3"
+      
+      # determine how to toggle
       if !isPlaying
         audio.play()
         document.body.appendChild image
