@@ -8,12 +8,6 @@ module Jekyll
   module AssetsPlugin
     class Renderer
       JAVASCRIPT = '<script type="text/javascript" src="%s" defer async></script>'
-      
-      def render_javascript
-        @path << ".js" if File.extname(@path).empty?
-        
-        JAVASCRIPT % render_asset_path
-      end
     end
   end
 end
