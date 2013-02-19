@@ -1,10 +1,13 @@
-_gaq = _gaq or []
-_gaq.push ["_setAccount", "UA-15406998-1"]
-_gaq.push ["_setDomainName", "bentruyman.com"]
-_gaq.push ["_trackPageview"]
+owa_baseUrl = 'http://owa.bentruyman.com/'
+owa_cmds = owa_cmds || []
+owa_cmds.push(['setSiteId', '2863f91112b8c03c5295e4e35ffd6bb6'])
+owa_cmds.push(['trackPageView'])
+owa_cmds.push(['trackClicks'])
+owa_cmds.push(['trackDomStream'])
 
-ga = document.createElement("script"); ga.type = "text/javascript";
-ga.async = true;
-ga.src = "http://www.google-analytics.com/ga.js";
-s = document.getElementsByTagName("script")[0]
-s.parentNode.insertBefore(ga, s)
+_owa = document.createElement('script')
+_owa.type = 'text/javascript'
+_owa.async = true
+_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js'
+_owa_s = document.getElementsByTagName('script')[0]
+_owa_s.parentNode.insertBefore(_owa, _owa_s)
