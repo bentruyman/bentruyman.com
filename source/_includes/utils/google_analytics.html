@@ -1,7 +1,8 @@
 {% if site.google_analytics_tracking_id %}
-  <script type="text/javascript" defer>
+  <script defer>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
+    _gaq.push(['_setDomainName', 'bentruyman.com']);
     _gaq.push(['_trackPageview']);
 
     (function() {
