@@ -1,3 +1,5 @@
 {% javascript bt %}
-<script src="http://platform.twitter.com/widgets.js" async></script>
-<script src="https://apis.google.com/js/plusone.js" async></script>
+{% if page.section == "blog" %}
+<script src="http://platform.twitter.com/widgets.js" async defer></script>
+<script src="https://apis.google.com/js/plusone.js" async defer></script>
+{% endif %}
