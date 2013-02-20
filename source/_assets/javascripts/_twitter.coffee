@@ -31,7 +31,7 @@ showTwitterFeed = (tweets, twitter_user) ->
 
 getTwitterFeed = (user, count, replies) ->
   count = parseInt count, 10
-  $.getJSON("/tweets&callback=?")
+  $.getJSON("/tweets?callback=?")
     .error((err) -> $("#tweets li.loading").addClass("error").text "Twitter's busted")
     .success((data) -> showTwitterFeed(data.slice(0, count), user))
 
