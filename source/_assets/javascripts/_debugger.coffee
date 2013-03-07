@@ -157,6 +157,20 @@ $(->
       notEnoughArgs()
   )
   
+  addCommand("cat", "Find local cats in your area", (->
+    markup = '<iframe src="http://adultcatfinder.com/embed/" width="320" height="430" style="position:fixed;bottom:0px;right:10px;z-index:100" frameBorder="0"></iframe>'
+    container = null
+    
+    (args) ->
+      console.log "Hello World"
+      if container is null
+        container = $(markup).appendTo("body")
+      else
+        $(container).remove()
+        container = null
+    )()
+  )
+  
   addCommand("goto", "Navigates to a page (goto [home, blog, about, resume])", (args) ->
     location = args[0]
     
