@@ -2,21 +2,33 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} - {% endif %}Ben Truyman</title>
   <meta name="author" content="{{ site.author }}">
-  
+
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-  
+
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  
+
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
-  
+
   {% stylesheet vendor/vendor %}
   {% stylesheet bt %}
-  
+
   <!--[if lt IE 9]>{% javascript vendor/html5shiv %}<![endif]-->
+
+  <script>
+  var _prum = [['id', '51794e04abe53db54d000000'],
+               ['mark', 'firstbyte', (new Date()).getTime()]];
+  (function() {
+      var s = document.getElementsByTagName('script')[0]
+        , p = document.createElement('script');
+      p.async = 'async';
+      p.src = '//rum-static.pingdom.net/prum.min.js';
+      s.parentNode.insertBefore(p, s);
+  })();
+  </script>
 </head>
