@@ -47,6 +47,9 @@ $color-text: #444;
 }
 
 html {
+  @media (min-width: 2048px) {
+    zoom: 1.25;
+  }
 }
 
 body {
@@ -54,10 +57,6 @@ body {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, sans-serif;
   @include background(#111 image-url("textures/irongrip.png"));
   @include background-size(300px 301px);
-
-  @media (min-width: 2048px) {
-    zoom: 1.25;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
