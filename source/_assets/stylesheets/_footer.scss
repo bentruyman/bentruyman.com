@@ -2,33 +2,33 @@
   color: #fff;
   padding-top: 20px;
   padding-bottom: 40px;
-  
+
   h2 {
     color: #fff;
     font-size: 18px;
     @include text-shadow(1px 1px 0 rbga(0, 0, 0, 0.75));
   }
-  
+
   hr {
     border-top:    1px solid #1f1f1f;
     border-bottom: 1px solid #4f4f4f;
     margin: 10px 0;
   }
-  
+
   dt {
     display: inline;
     font-weight: 700;
   }
-  
+
   dd {
     display: inline;
   }
-  
+
   a {
     color: #fff;
     text-decoration: underline;
   }
-  
+
   .created-at {
     font-size: 12px;
     display: block;

@@ -3,11 +3,11 @@
   @include background-size(4px 8px);
   @include transition(margin-top 0.5s ease-in-out);
   margin-top: -336px;
-  
+
   @include respondTo(smallScreen) {
     margin-top: -250px
   }
-  
+
   &.open {
     margin-top: 0;
   }
@@ -15,29 +15,29 @@
 
 #debugger-output {
   $foreground: #eee;
-  
+
   color: $foreground;
   font-family: monospace;
   height: 270px;
   overflow: scroll;
-  
+
   @include respondTo(smallScreen) {
     height: 184px;
   }
-  
+
   em {
     color: lighten($foreground, 25%);
     font-style: normal;
     font-weight: bold;
   }
-  
+
   .message {
     border-bottom: 1px solid #333;
   }
-  
+
   .from-user {
     opacity: 0.5;
-    
+
     &:before {
       color: darken($foreground, 25%);
       content: "> ";
@@ -63,13 +63,13 @@
   text-align: right;
   background: red;
   height: 25px;
-  
+
   a {
     color: #fff;
     font-size: 14px;
     @include text-shadow(1px 1px 0 rgba(0, 0, 0, 0.75));
     @include transition(opacity 0.25s ease-in-out);
-    
+
     &:hover {
       opacity: 0.75;
     }
@@ -82,7 +82,7 @@
   left: 50%;
   margin-left: -129px;
   margin-top: -90.5px;
-  
+
   @include animation(nyancat 4s linear infinite);
 }
 

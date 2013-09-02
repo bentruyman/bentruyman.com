@@ -3,15 +3,15 @@
 
 #page-header {
   $padding: 70px;
-  
+
   padding-bottom: $padding;
   padding-top:    $padding;
-  
+
   @include respondTo(mediumScreen) {
     padding-top:    $padding / 2;
     padding-bottom: $padding / 2;
   }
-  
+
   @include respondTo(smallScreen) {
     padding-top:    $padding / 3;
     padding-bottom: $padding / 3;
@@ -23,7 +23,7 @@
   font-weight: 700;
   display: inline-block;
   @include transition(all 0.15s ease-in-out);
-  
+
   &:hover {
     cursor: pointer;
     @include transform(scale(1.5) rotateZ(-2deg));
@@ -33,22 +33,22 @@
 #primary-nav {
   ul {
     float: right;
-    
+
     @include respondTo(smallScreen) {
       float: none;
     }
   }
-  
+
   li {
     font-weight: 600;
     margin-left: 2em;
     float: left;
-    
+
     &:first-child {
       margin-left: 0;
     }
   }
-  
+
   a {
     color: $color-text;
     display: block;
@@ -56,21 +56,21 @@
     border-bottom-style: solid;
     border-bottom-width: 2px;
     @include transition(all 0.2s ease-in-out);
-    
+
     &:hover,
     &.active {
       color: darken($color-text, 10%);
       border-bottom-color: $color-accent;
     }
   }
-  
+
   @include respondTo(smallScreen) {
     li {
-      
+
     }
-    
+
     a {
-      
+
     }
   }
 }

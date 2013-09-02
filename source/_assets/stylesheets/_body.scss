@@ -7,7 +7,7 @@
   @include background(#f00 linear-gradient(top, #f00, darken(#f00, 10%)));
   @include border-radius(5px);
   padding: 8px 16px;
-  
+
   &:hover {
     color: #fff;
   }
@@ -16,7 +16,7 @@
 .button-header {
   float: right;
   margin-top: -53px;
-  
+
   @include respondTo(smallScreen) {
     margin-top: 0;
     float: none;
