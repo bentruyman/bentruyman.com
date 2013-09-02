@@ -63,14 +63,4 @@
       border-bottom-color: $color-accent;
     }
   }
-
-  @include respondTo(smallScreen) {
-    li {
-
-    }
-
-    a {
-
-    }
-  }
 }
